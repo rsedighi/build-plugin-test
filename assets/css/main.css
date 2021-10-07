@@ -3880,3 +3880,7 @@ input, select, textarea {
 		}
 
 	}
+
+	.hidden {
+		display: none;
+	  }

@@ -41,7 +41,10 @@
 						</header>
 						<div class="content">
 							<p><strong>Enter your Email below.</strong> You will receive an email in your inbox to confirm your account.</p>
-							<form>
+							<form method="post" action="#" data-netlify="true" netlify-honeypot="bot-field">
+								<p class="hidden">
+									<label>Please do not fill this out if you’re human: <input name="bot-field" /></label>
+								  </p>
 								<div class="fields">
 									<div class="field half">
 										<input type="text" name="name" id="name" placeholder="Name" />
@@ -49,12 +52,9 @@
 									<div class="field half">
 										<input type="email" name="email" id="email" placeholder="Email" />
 									</div>
-									<div class="field">
-										<textarea name="message" id="message" placeholder="Message" rows="7"></textarea>
-									</div>
 								</div>
 								<ul class="actions">
-									<li><input type="submit" value="Send Message" class="button primary" /></li>
+									<li><input type="submit" value="Create Netlify Account" class="button primary" /></li>
 								</ul>
 							</form>
 						</div>
@@ -62,7 +62,6 @@
 							<ul class="items">
 							
 								<li>
-									<h3>Elsewhere</h3>
 									<ul class="icons">
 										<li><a href="twitter.com/netlify" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 										<li><a href="github.com/jamstack" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
