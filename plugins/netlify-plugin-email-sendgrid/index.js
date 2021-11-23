@@ -1,10 +1,6 @@
 const sgMail = require('@sendgrid/mail')
 require("dotenv").config();
 
-const {
-    SENDGRID_API_KEY,
-    DEPLOY_URL
-}
 
 module.exports = {
 
