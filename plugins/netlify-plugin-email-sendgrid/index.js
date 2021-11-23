@@ -1,9 +1,14 @@
-const sgMail = require('@sendgrid/mail')
-require("dotenv").config();
-
+const {
+    env: {
+      // Your Account SID 
+      SENDGRID_API_KEY,
+      
+      DEPLOY_URL,
+    }
+  } = require('process')
 
 module.exports = {
-
+    
     onSuccess: () => {
         console.log('onSuccess: I run on build success 🎉');
             sgMail.setApiKey(process.env.SENDGRID_API_KEY)
@@ -22,5 +27,6 @@ module.exports = {
             .catch((error) => {
                 console.error(error)
             })
+            console.log("Deploy URL: ${process.env.DEPLOY_URL} ")
     }
 }
