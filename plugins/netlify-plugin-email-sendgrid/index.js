@@ -5,7 +5,7 @@ module.exports = {
         console.log('onSuccess: I run on build success 🎉');
             sgMail.setApiKey(process.env.SENDGRID_API_KEY)
             const msg = {
-            to: 'ramin+test@netlify.com', // Change to your recipient
+            to: 'ramin@netlify.com', // Change to your recipient
             from: 'ramin+sendgrid@netlify.com', // Change to your verified sender
             subject: 'New Cirque Deploy URL',
             text: process.env.DEPLOY_URL,
