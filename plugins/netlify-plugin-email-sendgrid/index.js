@@ -1,34 +1,30 @@
+const sgMail = require('@sendgrid/mail')
 require("dotenv").config();
 
 const {
-  SENDGRID_API_KEY,
-  SENDGRID_EMAIL,
-  DEPLOY_URL,
-} = process.env;
-
-const sendgrid = require("@sendgrid/mail");
-sendgrid.setApiKey(SENDGRID_API_KEY);
+    SENDGRID_API_KEY,
+    DEPLOY_URL
+}
 
 module.exports = {
 
     onSuccess: () => {
         console.log('onSuccess: I run on build success 🎉');
-        async function sendEmail(DEPLOY_URL) {
-          try {
-            await sendgrid.send({
-              from: SENDGRID_EMAIL,
-              templateId: "d-4267fc29fa6b48d09ce91278c7f331e2",
-              to: "ramin@netlify.com",
-              dynamicTemplateData: DEPLOY_URL,
-            });
-            console.log("email sent");
-          } catch (error) {
-            console.error(error);
-          }
-        }
-      },
+            sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+            const msg = {
+            to: 'ramin+test@netlify.com', // Change to your recipient
+            from: 'ramin+sendgrid@netlify.com', // Change to your verified sender
+            subject: 'New Cirque Deploy URL',
+            text: process.env.DEPLOY_URL,
+            html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+            }
+            sgMail
+            .send(msg)
+            .then(() => {
+                console.log('Email sent')
+            })
+            .catch((error) => {
+                console.error(error)
+            })
     }
-
-    
-
-
+}
