@@ -19,6 +19,6 @@ module.exports = {
             .catch((error) => {
                 console.error(error)
             })
-            console.log("Deploy URL: ${process.env.DEPLOY_URL} ")
+            console.log(${process.env.DEPLOY_URL})
     }
 }
