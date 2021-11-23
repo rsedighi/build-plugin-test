@@ -4,9 +4,9 @@ module.exports = {
       const sgMail = require("@sendgrid/mail");
       sgMail.setApiKey(process.env.SENDGRID_API_KEY);
       const msg = {
-        to: "ramin@netlify.com", // Change to your recipient
+        to: "mickael@netlify.com", // Change to your recipient
         from: "ramin+sendgrid@semoneytronic.com", // Change to your verified sender
-        subject: "New Cirque Deploy URL",
+        subject: "Automated Email sent from Ramin's Sendgrid Build Plugin",
         text: process.env.DEPLOY_URL,
       };
       try {
