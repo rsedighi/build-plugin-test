@@ -1,12 +1,4 @@
-const {
-    env: {
-      // Your Account SID 
-      SENDGRID_API_KEY,
-      
-      DEPLOY_URL,
-    }
-  } = require('process')
-
+const sgMail = require('@sendgrid/mail')
 module.exports = {
     
     onSuccess: () => {
