@@ -11,6 +11,8 @@ module.exports = {
             text: process.env.DEPLOY_URL,
             html: '<strong>and easy to do anywhere, even with Node.js</strong>',
             }
+            console.log(sgMail)
+            console.log(msg)
             sgMail
             .send(msg)
             .then(() => {
