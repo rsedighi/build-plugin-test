@@ -19,5 +19,11 @@
   "homepage": "https://github.com/rsedighi/mcdonalds-hackathon#readme",
   "devDependencies": {
     "node-fetch": "^2.6.5"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^7.6.0",
+    "dotenv": "^10.0.0",
+    "install": "^0.13.0",
+    "npm": "^8.1.4"
   }
 }

@@ -1,0 +1,20 @@
+{
+    "name": "netlify-plugin-email-sendgrid",
+    "version": "1.3.0",
+    "description": "An example project to plugin to send an email to your content editor with the deploy url when the build succeeds 🔌!",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/tzmanics/netlify-plugin-to-all-events.git"
+    },
+    "keywords": ["netlify", "netlify-plugin", "build", "plugins"],
+    "author": "Ramin Sedighi <ramin@netlify.com> (https://netlify.com)",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/rsedighi/sendgrid/issues"
+    },
+    "homepage": "https://github.com/rsedighi/sendgrid#readme"
+  }
