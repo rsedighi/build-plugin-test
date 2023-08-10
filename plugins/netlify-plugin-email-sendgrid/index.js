@@ -1,6 +1,6 @@
 module.exports = {
-    async onPreBuild() {
-      console.log("onSuccess: I run  onPreBuild 🎉");
+    async onPostBuild() {
+      console.log("onPostBuild: I run  onPostBuild 🎉");
 
       const fs = require("fs")
 
@@ -11,7 +11,7 @@ module.exports = {
         console.log(file);
       });
 
-      
+
       // const sgMail = require("@sendgrid/mail");
       // sgMail.setApiKey(process.env.SENDGRID_API_KEY);
       // const msg = {
