@@ -1,0 +1,17 @@
+{
+    "name": "netlify-get-odb-handler",
+    "version": "1.3.0",
+    "description": "Gets the ODB handler build by Netlify BuildBot",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/tzmanics/netlify-plugin-to-all-events.git"
+    },
+    "keywords": ["netlify", "netlify-plugin", "build", "plugins"],
+    "author": "Ramin Sedighi <ramin@netlify.com> (https://netlify.com)",
+    "license": "MIT",
+    "homepage": "https://github.com/rsedighi"
+  }
