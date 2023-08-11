@@ -1,15 +1,9 @@
-module.exports = {
-    async onPostBuild() {
-      console.log("onPostBuild: I run  onPostBuild 🎉");
-
-      const fs = require("fs")
-
-      const filenames = fs.readdirSync(__dirname);
-  
-      console.log("\nCurrent directory filenames:");
-      filenames.forEach(file => {
-        console.log(file);
-      });
+import {readdirSync} from 'node:fs'
+export const onPostBuild = meta => {
+  readdirSync(`../../../${meta.constants.FUNCTIONS_DIST}`).forEach(fileOrFolder => {
+    console.log(fileOrFolder)
+  })
+}
 
 
       // const sgMail = require("@sendgrid/mail");
@@ -31,5 +25,3 @@ module.exports = {
       //   }
       // }
       // console.log(process.env.DEPLOY_URL);
-    },
-  };
